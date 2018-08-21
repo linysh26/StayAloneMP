@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane  fx:id="AnchorPane_musicListPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="address.view.MusicListPageController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label fx:id="Tag">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button fx:id="Button_Add" mnemonicParsing="false" onAction="#addLocalMusic" text="Add" >
+                  <font>
+                  	<Font size="16.0" />
+                  </font></Button>
+                  <Button fx:id="Button_Remove" mnemonicParsing="false" onAction="#removeMusic" text="Remove" >
+                  <font>
+                  	<Font size="16.0" />
+                  </font></Button>
+                  <Button fx:id="Button_Upload" mnemonicParsing="false" onAction="#uploadMusic" text="Upload" >
+                  <font>
+                  	<Font size="16.0" />
+                  </font></Button>
+               </children>
+            </HBox>
+            <TableView fx:id="TableView_musicTable" prefHeight="600.0" prefWidth="800.0">
+              <columns>
+                <TableColumn fx:id="TableColumn_Button" prefWidth="110.0" />
+                <TableColumn fx:id="TableColumn_musicTitle" prefWidth="200.0" text="歌名" />
+                  <TableColumn fx:id="TableColumn_singer" prefWidth="150.0" text="歌手" />
+                  <TableColumn fx:id="TableColumn_albumName" prefWidth="400.0" text="专辑" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

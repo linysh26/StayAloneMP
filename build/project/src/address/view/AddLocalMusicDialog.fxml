@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="AnchorPane_Dialog" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="address.view.AddLocalMusicController">
+   <children>
+      <GridPane layoutX="256.0" layoutY="83.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="60.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="355.0" minWidth="10.0" prefWidth="245.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="475.0" minWidth="10.0" prefWidth="475.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="Label_MusicPath" text="Music Path" />
+            <Label fx:id="Label_AlbumPath" text="Album Path" GridPane.rowIndex="1" />
+            <Label fx:id="Label_MusicName" text="Music Name" GridPane.rowIndex="2" />
+            <TextField fx:id="Field_MusicName" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="Label_Singer" text="Singer" GridPane.rowIndex="3" />
+            <TextField fx:id="Field_Singer" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="Label_Album" text="Album Name" GridPane.rowIndex="4" />
+            <TextField fx:id="Field_Album" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Button fx:id="Button_ChooseMusic" mnemonicParsing="false" onAction="#loadMusicFileButtonHandler" text="File" />
+                  <TextField fx:id="Field_MusicPath" prefWidth="400.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="370.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Button fx:id="Button_ChooseImage" mnemonicParsing="false" onAction="#loadImageFileButtonHandler" text="File" />
+                  <TextField fx:id="Field_AlbumPath" prefWidth="400.0" />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+      <HBox layoutX="360.0" layoutY="529.0" prefHeight="50.0" prefWidth="400.0" spacing="40.0">
+         <children>
+         	<Button fx:id="Button_Add" mnemonicParsing="false" onAction="#addButtonHandler" prefWidth="180.0" text="Add" />
+            <Button fx:id="Button_Cancel" mnemonicParsing="false" onAction="#cancelButtonHandler" prefWidth="180.0" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

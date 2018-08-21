@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="CrystalEyesMusicPlayer.jnlp">
+  <information>
+    <title>CrystalEyesMusicPlayer</title>
+    <vendor>lin</vendor>
+    <description>CrescentFairy</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="CrystalEyesMusicPlayer.jar" size="20896" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="address.MusicPlayerMainUI"  name="CrescentFairy" />
+  <update check="background"/>
+</jnlp>

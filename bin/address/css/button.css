@@ -1,0 +1,44 @@
+.label.text{
+	-fx-padding:0, 100px, 0, 0;
+}
+.button {
+    -fx-border-color: WHITE;
+    -fx-border-width: 2;
+    -fx-border-radius:100%;
+    -fx-background-radius: 100%;
+    -fx-background-color: DeepSkyBlue;
+    -fx-font-family: "Segoe UI", "ËÎÌו";
+    -fx-text-fill: WHITE;
+    -fx-font-weight:bold;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: rgb(0,128,255);
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: #1d1d1d;
+}
+
+.button:focused {
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-border-radius: 100%;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}

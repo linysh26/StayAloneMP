@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../css/button.css" AnchorPane.leftAnchor="587.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="address.view.MusicPlayerMainUIController">
+   <bottom>
+      <AnchorPane fx:id="AnchorPane_Bottom" maxHeight="100.0" minHeight="100.0" prefHeight="100.0" style="-fx-background-color: white" BorderPane.alignment="CENTER">
+         <children>
+            <ProgressBar fx:id="Progress_Music" maxHeight="10.0" minHeight="8.0" prefHeight="8.0" prefWidth="1330.0" progress="0.0" style="-fx-background-color: PowderBlue;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="485.0" AnchorPane.rightAnchor="100.0" />
+            <Label fx:id="Music_Duration" layoutX="1013.0" layoutY="27.0" prefHeight="32.0" text="00:00/00:00" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="10.0" />
+            <HBox spacing="10.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="115.0">
+               <children>
+                  <Button fx:id="Button_Last" mnemonicParsing="false" onAction="#lastMusicButtonHandler" prefHeight="50.0" prefWidth="50.0" />
+                  <Button fx:id="Button_Play" mnemonicParsing="false" onAction="#playingButtonHandler" prefHeight="50.0" prefWidth="50.0" />
+                  <Button fx:id="Button_Next" mnemonicParsing="false" onAction="#nextMusicButtonHandler" prefHeight="50.0" prefWidth="50.0" />
+               </children>
+            </HBox>
+            <HBox fx:id="Volumn_Box" alignment="CENTER" prefHeight="48.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="40.0">
+               <children>
+                  <Button fx:id="Button_Volumn" mnemonicParsing="false" onAction="#volumnButtonHandler" />
+                  <StackPane>
+                     <children>
+                        <ProgressBar fx:id="Progress_Volumn" maxHeight="8.0" minHeight="8.0" prefHeight="8.0" prefWidth="150.0" progress="0.0" style="-fx-background-color: PowderBlue;" />
+                        <Slider fx:id="Slider_Volumn" prefHeight="28.0" prefWidth="150.0" />
+                     </children>
+                  </StackPane>
+                  <Label fx:id="Volumn" prefHeight="39.0" prefWidth="80.0" text="Volumn" />
+               </children>
+            </HBox>
+            <Label fx:id="Label_PlayingList" layoutX="952.0" layoutY="102.0" mnemonicParsing="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="520.0">
+            <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <ImageView fx:id="Image_MusicList" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="400.0" />
+            <Slider fx:id="Slider_Music" prefHeight="50.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="485.0" AnchorPane.rightAnchor="100.0" />
+            <Button fx:id="Button_CurrentPlayingMusicList" layoutX="411.0" layoutY="51.0" mnemonicParsing="false" onAction="#playingListButtonHandler" text="🎶" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="470.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <left>
+      <AnchorPane fx:id="AnchorPane_PlayingPane" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="Image_Music" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <HBox fx:id="MusicTag_Box" alignment="CENTER" layoutX="447.0" layoutY="37.0" prefHeight="100.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="Label_CurrentMusic" maxWidth="300.0">
+                     <font>
+                        <Font name="System Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <AnchorPane fx:id="AnchorPane_Top" prefHeight="100.0" prefWidth="1200.0" style="-fx-background-color: DeepSkyBlue;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="Button_HomePage" layoutX="546.0" layoutY="26.0" mnemonicParsing="false" onAction="#homeButtonHandler" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="26.0" />
+            <Button fx:id="Button_LastPage" layoutX="735.0" layoutY="26.0" mnemonicParsing="false" onAction="#lastPageButtonHandler" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="26.0" />
+            <Button fx:id="Button_NextPage" layoutX="808.0" layoutY="26.0" mnemonicParsing="false" onAction="#nextPageButtonHandler" AnchorPane.leftAnchor="550.0" AnchorPane.topAnchor="26.0" />
+            <Button fx:id="Button_Refresh" layoutX="856.0" layoutY="26.0" mnemonicParsing="false" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="26.0" />
+            <TextField fx:id="Field_Search" layoutX="898.0" layoutY="26.0" prefWidth="300.0" promptText="Search music..." AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="26.0" />
+            <Button fx:id="Button_Search" layoutX="1242.0" layoutY="26.0" mnemonicParsing="false" onAction="#searchButtonHandler" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="26.0" />
+            <Button fx:id="Button_Minimum" layoutX="1367.0" layoutY="26.0" mnemonicParsing="false" onAction="#minimumButtonHander" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="26.0" />
+            <Button fx:id="Button_Maximum" layoutX="1435.0" layoutY="26.0" mnemonicParsing="false" onAction="#maximumButtonHandler" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="26.0" />
+            <Button fx:id="Button_Close" layoutX="1453.0" layoutY="26.0" mnemonicParsing="false" onAction="#closeButtonHandler" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="26.0" />
+            <ImageView fx:id="Image_TheUp" fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0" />
+            <Label fx:id="Label_Mood" layoutX="130.0" layoutY="34.0" text="Label" textFill="WHITE" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+            <Button fx:id="Button_Setting" layoutX="964.0" layoutY="30.0" mnemonicParsing="false" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="26.0" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
